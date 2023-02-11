@@ -3,6 +3,7 @@
 /* 
 
 Arrays = [] ou array()
+Array associativos
 print_r();
 índices
 Funções de arrays
