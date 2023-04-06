@@ -1,5 +1,6 @@
 <?php
-require_once "php-actions/bd.php"; // Pegando o BD 
+require_once "php-actions/bd.php"; // Pegando o BD
+$_SESSION['logado'] = '0';
 session_start(); //Iniciando uma sessão
 $_SESSION['logado'] = '0'; // Como não tá logado recebe 0
 if ($_SESSION['logado'] == '1'){ // Se logado for igual 1, é verdadeiro
