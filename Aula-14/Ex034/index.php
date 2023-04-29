@@ -2,6 +2,7 @@
 
 require_once 'php-actions/connect.php';
 include_once 'includes/header.html';
+session_start();
 
 ?>
     <form action="index.php" method="post">
@@ -18,13 +19,14 @@ include_once 'includes/header.html';
 
 $senha = $_POST["senha"];
 $user = $_POST["user"];
+
 $sql = "SELECT * FROM pessoa"; //Código SQL
 $resultado = mysqli_query($conexao,$sql); //Pegando os dados
 
 while ($dados = mysqli_fetch_array($resultado)){ //Verificando os dados
     if ($senha == $dados['senha'] && $user == $dados['login']){ //Se os dados forem compatíveis
-        echo "senha existente";
         $_SESSION['logado'] = '1';
+        $_SESSION['id'] = $dados['id'];
         header("Location: restrita.php");
         break;
     }

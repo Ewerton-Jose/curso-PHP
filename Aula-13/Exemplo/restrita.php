@@ -6,9 +6,12 @@ if ($_SESSION['logado'] == '0'){
     header('Location: index.php');
 };
 
-$sql = "SELECT * FROM senhas_registradas";
+$id = $_SESSION['id'];
+
+$sql = "SELECT * FROM senhas_registradas where id = $id";
 $resultado = mysqli_query($conexao, $sql);
 $dados = mysqli_fetch_array($resultado);
+
 $user = $dados['usuario'];
 $info = $dados['emergencia'];
 echo "Olá $user, Seu contato de emergência é $info";

@@ -27,7 +27,7 @@ while($dados = ³mysqli_fetch_array($resultado)){
     echo "Você é $nome $sobrenome e você tem $idade anos";
 }
 
-EX033: Crie um BD e mostre na tela de usuários os dados que tem nele, que vão ser Nome, Idade, Email, Telefone, id (o exércício deve conter includes)
+EX033: Crie um BD de registro de pessoas com dados(Nome, Idade, Email, Telefone, id) e mostre na tela de usuários os dados que tem nele (o exércício deve conter includes)
 
 */
 

@@ -33,15 +33,19 @@ if ($_SESSION['logado'] == '1'){ // Se logado for igual 1, é verdadeiro
 
 $senha = $_POST["senha"];
 $user = $_POST["user"];
-$sql = "SELECT * FROM senhas_registradas"; //Código SQL
-$resultado = mysqli_query($conexao,$sql); //Pegando os dados
 
+$sql = "SELECT * FROM senhas_registradas"; //Código SQL
+
+$resultado = mysqli_query($conexao,$sql); //Pegando os dados
 while ($dados = mysqli_fetch_array($resultado)){ //Verificando os dados
     if ($senha == $dados['senha'] && $user == $dados['usuario']){ //Se os dados forem compatíveis
         echo "senha existente";
         $_SESSION['logado'] = '1';
+        $_SESSION['id'] = $dados['id'];
         header("Location: restrita.php");
         break;
+    } else {
+        echo "O úsuário $user não existe";
     }
 }  
 ?>
