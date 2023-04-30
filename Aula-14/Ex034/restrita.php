@@ -18,7 +18,7 @@ echo $dados['nome']. '<br>';
 echo $dados['email'].'<br>';
 echo $dados['telefone'].'<br>';
 echo $dados['idade'].'<br>';
-echo $dados['login'].'<br>';
+echo $dados['nickname'].'<br>';
 
 include_once 'includes/footer.html';
     
@@ -26,3 +26,4 @@ include_once 'includes/footer.html';
 ?>
 
 <form action="php-actions/sair.php"><button type="submit">Sair</button></form>
+<a href="editar.php"><button>Editar</button></a>
