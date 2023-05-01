@@ -19,6 +19,7 @@ echo $dados['email'].'<br>';
 echo $dados['telefone'].'<br>';
 echo $dados['idade'].'<br>';
 echo $dados['nickname'].'<br>';
+echo $dados['senha'];
 
 include_once 'includes/footer.html';
     

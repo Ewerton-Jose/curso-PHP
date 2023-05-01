@@ -37,3 +37,5 @@ while ($dados = mysqli_fetch_array($resultado)){ //Verificando os dados
 include_once 'includes/footer.html';
 
 ?>
+
+<a href="registrar.php"><button>Registrar-se</button</a>
